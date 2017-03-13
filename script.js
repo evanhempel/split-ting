@@ -469,20 +469,20 @@
           megabytesPrice = 3;
           planType = 'Small';
         } else if (billTotal['megabytes'] > 105 && billTotal['megabytes'] < 526 ) {
-          megabytesPrice = 12;
+          megabytesPrice = 10;
           planType = 'Medium';
         } else if (billTotal['megabytes'] > 525 && billTotal['megabytes'] < 1051) {
-          megabytesPrice = 19;
+          megabytesPrice = 16;
           planType = 'Large';
         } else if (billTotal['megabytes'] > 1050 && billTotal['megabytes'] < 2001) {
-          megabytesPrice = 29;
+          megabytesPrice = 20;
           planType = 'XL';
         } else {
-          megabytesPrice = 29;
+          megabytesPrice = 20;
           planType = 'XXL';
           extraMegabytes = parseFloat(billTotal['megabytes']) - parseFloat(2000);
           console.log('Extra Megabytes: ' + extraMegabytes);
-          extraMegabytesPrice = extraMegabytes * .015;
+          extraMegabytesPrice = extraMegabytes * .01;
           extraMegabytesPrice = Math.round((extraMegabytesPrice * 100))/100;
           megabytesTotal = 2000;
           overageMegabytes = parseInt(billTotal['megabytes']) - parseInt(2000);
